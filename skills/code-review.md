@@ -1,6 +1,6 @@
 Perform a senior data engineer code review of $ARGUMENTS.
 
-Review against production fintech standards (SoFi/FAANG-grade).
+Review against production fintech standards (FAANG-grade).
 
 CORRECTNESS:
 - Logic errors or off-by-one errors in date filters

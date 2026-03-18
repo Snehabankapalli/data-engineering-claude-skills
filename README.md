@@ -1,6 +1,6 @@
 # Data Engineering Claude Skills
 
-> 9 production-grade Claude Code skills for data engineers — built from 7+ years of fintech pipeline experience at SoFi, Optum, and T-Mobile.
+> 9 production-grade Claude Code skills for data engineers — built from 7+ years of fintech and healthcare pipeline experience.
 
 Install in 30 seconds. Use with `/skill-name` in Claude Code. Get senior data engineer output instantly.
 
@@ -120,9 +120,19 @@ Copy `memory/data-stack-context.md` into your project as `CLAUDE.md` and fill in
 
 ---
 
+## 🛒 More Data Engineering Resources
+
+| Product | What You Get | Price |
+|---|---|---|
+| [Data Engineering Claude Code Starter Kit](https://snehabank.gumroad.com/l/aaugjh) | This repo — packaged with install scripts and setup guide | $19 |
+| [Snowflake Cost Optimization Playbook](https://snehabank.gumroad.com/l/kapqn) | 10 cost leaks + copy-paste SQL to detect and fix each one | $25 |
+| [Data Engineering Interview Kit](https://snehabank.gumroad.com/l/qjfgjf) | 50 SQL questions + 10 system designs + 4 cheat sheets | $15 |
+
+---
+
 ## Built By
 
-**Sneha Bankapalli** — Senior Data Engineer at SoFi.
+**Sneha Bankapalli** — Senior Data Engineer at a fintech company.
 These skills encode patterns from production pipelines processing 100M+ daily events across fintech and healthcare.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sneha2095-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/sneha2095/)
