@@ -31,4 +31,8 @@ Write-Host "  /incident-response  — P0/P1 incident playbook" -ForegroundColor 
 Write-Host "  /data-contract      — generate a data contract" -ForegroundColor Gray
 Write-Host "  /schema-design      — dimensional modeling" -ForegroundColor Gray
 Write-Host "  /cost-analysis      — Snowflake cost audit" -ForegroundColor Gray
-Write-Host "  /code-review        — senior DE code review`n" -ForegroundColor Gray
+Write-Host "  /code-review        — senior DE code review" -ForegroundColor Gray
+Write-Host "  /tf-infra           — Terraform for AWS data infra" -ForegroundColor Gray
+Write-Host "  /data-quality       — data quality audit + health score" -ForegroundColor Gray
+Write-Host "  /debug-pipeline     — structured pipeline debugging" -ForegroundColor Gray
+Write-Host "  /mcp-server         — build a FastMCP server`n" -ForegroundColor Gray

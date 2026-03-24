@@ -1,6 +1,6 @@
 # Data Engineering Claude Skills
 
-> 9 production-grade Claude Code skills for data engineers — built from 7+ years of fintech and healthcare pipeline experience.
+> 13 production-grade Claude Code skills for data engineers — built from 7+ years of fintech and healthcare pipeline experience.
 
 Install in 30 seconds. Use with `/skill-name` in Claude Code. Get senior data engineer output instantly.
 
@@ -101,6 +101,42 @@ Senior DE code review against production fintech standards — correctness, perf
 
 ```
 /code-review the SQL in stg_transactions.sql
+```
+
+---
+
+### `/tf-infra [description]`
+Generate production Terraform HCL for AWS data infrastructure — EMR Serverless, Glue, S3, MSK/Kafka, IAM roles (least privilege), remote state, cost controls, and budget alerts.
+
+```
+/tf-infra S3 to Snowflake pipeline with Glue ETL and EMR Serverless for PySpark
+```
+
+---
+
+### `/data-quality [table or dataframe]`
+Full data quality audit — null rates, duplicate detection, freshness check, referential integrity, distribution anomalies, and schema drift. Outputs severity-ranked report with recommended dbt tests and a 0-100 health score.
+
+```
+/data-quality fct_payments in the ANALYTICS database
+```
+
+---
+
+### `/debug-pipeline [what's broken]`
+Structured debugging for PySpark, Glue, Airflow, and Kafka failures. Follows a 3-phase protocol: identify, isolate, fix. Outputs root cause in one sentence plus production-ready corrective code.
+
+```
+/debug-pipeline Glue job fails with OutOfMemoryError on partition step
+```
+
+---
+
+### `/mcp-server [what to expose]`
+Build a complete MCP server using FastMCP (Python) — exposes your data pipeline, Snowflake queries, or internal API directly to Claude. Includes tools, resources, config, and Claude Desktop setup.
+
+```
+/mcp-server Snowflake read-only query interface with schema browser
 ```
 
 ---
