@@ -1,6 +1,9 @@
 # Data Engineering Claude Skills
 
-> 13 production-grade Claude Code skills for data engineers — built from 7+ years of fintech and healthcare pipeline experience.
+[![CI](https://github.com/Snehabankapalli/data-engineering-claude-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/Snehabankapalli/data-engineering-claude-skills/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+> 13 production-grade Claude Code skills for data engineers, built from 7+ years of fintech and healthcare pipeline experience.
 
 Install in 30 seconds. Use with `/skill-name` in Claude Code. Get senior data engineer output instantly.
 

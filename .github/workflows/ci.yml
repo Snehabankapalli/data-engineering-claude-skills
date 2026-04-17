@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  lint-markdown:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            skills/**/*.md
+            *.md
+
+  validate-frontmatter:
+    name: Validate skill frontmatter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check every skill has required frontmatter
+        run: |
+          set -euo pipefail
+
+          fail=0
+          shopt -s nullglob
+
+          for f in skills/*.md; do
+            echo "Checking: $f"
+
+            # Must start with a YAML frontmatter block
+            first_line="$(head -n 1 "$f")"
+            if [ "$first_line" != "---" ]; then
+              echo "::error file=$f::Missing opening '---' frontmatter delimiter"
+              fail=1
+              continue
+            fi
+
+            # Extract frontmatter block between the first two '---' lines
+            fm="$(awk '/^---$/{c++; next} c==1{print} c==2{exit}' "$f")"
+
+            if [ -z "$fm" ]; then
+              echo "::error file=$f::Empty frontmatter block"
+              fail=1
+              continue
+            fi
+
+            if ! echo "$fm" | grep -qE '^name:[[:space:]]*.+'; then
+              echo "::error file=$f::Missing required key 'name' in frontmatter"
+              fail=1
+            fi
+
+            if ! echo "$fm" | grep -qE '^description:[[:space:]]*.+'; then
+              echo "::error file=$f::Missing required key 'description' in frontmatter"
+              fail=1
+            fi
+          done
+
+          if [ "$fail" -ne 0 ]; then
+            echo "One or more skills failed frontmatter validation."
+            exit 1
+          fi
+
+          echo "All skills passed frontmatter validation."
